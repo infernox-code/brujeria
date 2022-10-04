@@ -1,0 +1,9 @@
+#appbar {
+    width: 100vw;
+    background-color: var(--fondo-negro);
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+}
