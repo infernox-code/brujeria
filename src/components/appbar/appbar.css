@@ -1,9 +1,16 @@
 #appbar {
+    position: fixed;
     width: 100vw;
     background-color: var(--fondo-negro);
+    z-index: 7;
 }
 
 #logo {
+    position: fixed;
     height: 50px;
     width: 50px;
+    top: 10px;
+    margin: 0;
+    left: 60px; 
+    z-index: 8;
 }

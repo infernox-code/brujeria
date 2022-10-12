@@ -2,4 +2,56 @@
   height: 100vh;
   margin: 0;
   padding: 0;
+  color: white;
+}
+
+#navigation-button {
+  position: fixed;
+  z-index: 8;
+  bottom: 35px;
+  left: 40px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f40000;
+  padding-top: 10px;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  padding-top: 5px;
+}
+
+.inital-section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mr-100 {
+  margin-right: 100px;
 }

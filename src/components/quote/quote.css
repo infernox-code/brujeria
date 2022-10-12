@@ -1,0 +1,43 @@
+#quote {
+    width: 60vw;
+    color: white;
+    background-color: var(--fondo-negro);
+    padding: 40px 50px;
+    border-radius: 10px;
+}
+
+.quote-left {
+    margin: 40px;
+}
+.quote-rigth {
+    margin: 40px 5rem 30px auto !important;
+}
+
+.quote-text {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.quote-author {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--tono-amarillo-one);
+}
+
+.quote-profession {
+    color: var(--tono-amarillo-two);
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.quotation-mark {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.quote-svg {
+    width: 55px;
+    height: 55px;
+    color: var( --rojo-two);
+}

@@ -9,6 +9,11 @@
   --rojo-one: #d00000;
   --rojo-two: #dc2f02;
   --blanco: #ffffff;
+  --gray-dark: #CFC3C6;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -18,6 +23,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   font-family: "Roboto", "Helvetica", "Arial";
+  background-color: #0b090a;
 }
 
 .mr-20 {
@@ -32,4 +38,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.styles-module_floatingWhatsapp__1akvz {
+  height: 0 !important;
 }

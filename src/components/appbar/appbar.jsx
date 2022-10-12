@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,15 +10,15 @@ import Container from "@mui/material/Container";
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import BootstrapButton from "../customButton/customButton";
-import MagicHatIcon from '../../assets/magic-hat.ico';
+import CustomButtonComponent from "../customButton/customButton";
+import MagicHatIcon from '../../assets/witch-hat.png';
 import "./appbar.css";
 
 const pages = ["Inicio", "Servicios", "Testimonios", "Contactenos", "Terminos y condiciones"];
 
-const ResponsiveAppBarComponent = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+const ResponsiveAppBarComponent = ({ scrollSection }) => {
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -28,12 +28,15 @@ const ResponsiveAppBarComponent = () => {
     setAnchorElNav(null);
   };
 
+  const handleClick = () => {
+    window.open("https://api.whatsapp.com/send/?phone=+573177837117&text=Hola Maestro", "_blank");
+  }
   return (
+    <>
+    <img id="logo" src={MagicHatIcon} alt="magic hat icon"/>
     <AppBar id="appbar" position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img id="logo" src={MagicHatIcon} alt="magic hat icon"/>
-
           <Box  sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -71,10 +74,12 @@ const ResponsiveAppBarComponent = () => {
             </Menu>
           </Box>
           <Box className="center" sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={index}
+                onClick={() => {
+                  scrollSection(index);
+                }}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
@@ -83,13 +88,14 @@ const ResponsiveAppBarComponent = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }} className="mr-20">
-            <BootstrapButton variant="outlined" startIcon={<PhoneInTalkIcon />}>
+            <CustomButtonComponent onClick={handleClick} variant="outlined" startIcon={<PhoneInTalkIcon />}>
               Chat en linea con los maestros!
-            </BootstrapButton>
+            </CustomButtonComponent>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
+    </>
   );
 };
 export default ResponsiveAppBarComponent;

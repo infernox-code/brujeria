@@ -1,42 +1,43 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import Button from "@mui/material/Button";
 
-const BootstrapButton = styled(Button)({
-  boxShadow: 'none',
-  textTransform: 'none',
+const CustomButtonComponent = styled(Button)({
+  boxShadow: "none",
+  textTransform: "none",
   fontSize: 16,
-  padding: '6px 12px',
-  border: '1px solid',
+  padding: "6px 12px",
+  border: "1px solid",
   lineHeight: 1.5,
-  backgroundColor: '#0b090a',
-  borderColor: '#ffba08',
-  color: '#FFFFFF',
+  backgroundColor: "#0b090a",
+  borderColor: "#dc2f02",
+  color: "#FFFFFF",
+  borderRadius: "20px",
   fontFamily: [
-    '-apple-system',
-    'BlinkMacSystemFont',
+    "-apple-system",
+    "BlinkMacSystemFont",
     '"Segoe UI"',
-    'Roboto',
+    "Roboto",
     '"Helvetica Neue"',
-    'Arial',
-    'sans-serif',
+    "Arial",
+    "sans-serif",
     '"Apple Color Emoji"',
     '"Segoe UI Emoji"',
     '"Segoe UI Symbol"',
-  ].join(','),
-  '&:hover': {
-    backgroundColor: '#ffba08',
-    borderColor: '#f48c06',
-    boxShadow: 'none',
+  ].join(","),
+  "&:hover": {
+    backgroundColor: "#d00000",
+    borderColor: " #f40000",
+    boxShadow: "none",
   },
-  '&:active': {
-    boxShadow: 'none',
-    backgroundColor: '#ffba08',
-    borderColor: '#f48c06',
+  "&:active": {
+    boxShadow: "none",
+    backgroundColor: "#d00000",
+    borderColor: " #f40000",
   },
-  '&:focus': {
-    boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+  "&:focus": {
+    boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
   },
 });
 
-export default BootstrapButton;
+export default CustomButtonComponent;
