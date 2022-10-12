@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
-const Model = (props) => {
+export function Model(props) {
   const { nodes, materials } = useGLTF("/witch_hat_with_old_iron.glb");
   return (
     <group {...props} dispose={null} ref={props.reference}>
@@ -13,7 +13,6 @@ const Model = (props) => {
         >
           <mesh geometry={nodes.Sphere_0.geometry} material={materials.Bolt} />
         </group>
-        <group position={[4.08, 1.01, 5.9]} rotation={[-0.27, 0.6, 1.93]} />
         <group position={[0.01, 0.84, 0.38]} scale={0.1}>
           <mesh
             geometry={nodes.Cube002_0.geometry}
@@ -73,16 +72,6 @@ const Model = (props) => {
           rotation={[-0.38, -0.05, -0.02]}
           scale={0.01}
         >
-          <group position={[-0.25, 1.29, 0.84]} scale={67.92} />
-          <group position={[-1.51, 1.21, -0.62]} scale={67.92} />
-          <group position={[-1.59, -0.76, -0.62]} scale={67.92} />
-          <group position={[1.42, -0.74, -0.62]} scale={67.92} />
-          <group position={[1.42, 1.21, -0.62]} scale={67.92} />
-          <group position={[-0.05, 1.77, -0.62]} scale={67.92} />
-          <group position={[-1.08, 0.59, 0.84]} scale={67.92} />
-          <group position={[-0.52, -2.32, 0.84]} scale={67.92} />
-          <group position={[0.29, 0.38, 0.84]} scale={67.92} />
-          <group position={[-0.25, -0.48, 0.84]} scale={67.92} />
           <mesh
             geometry={nodes.Utug_0.geometry}
             material={materials["Material.007"]}
@@ -111,7 +100,8 @@ const Model = (props) => {
       </group>
     </group>
   );
-};
+}
+
 useGLTF.preload("/witch_hat_with_old_iron.glb");
 
 export default Model;

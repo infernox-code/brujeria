@@ -14,12 +14,12 @@
 }
 
 .quote-text {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .quote-author {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
     color: var(--tono-amarillo-one);
@@ -27,7 +27,7 @@
 
 .quote-profession {
     color: var(--tono-amarillo-two);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: lighter;
 }
 

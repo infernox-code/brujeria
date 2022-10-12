@@ -12,7 +12,6 @@ const CustomButtonComponent = styled(Button)({
   backgroundColor: "#0b090a",
   borderColor: "#dc2f02",
   color: "#FFFFFF",
-  borderRadius: "20px",
   fontFamily: [
     "-apple-system",
     "BlinkMacSystemFont",

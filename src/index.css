@@ -1,7 +1,7 @@
 :root {
   --fondo-negro: #0b090a;
   --negro-azulado: #03071e;
-  --negro-rojiso: #370617;
+  --negro-rojiso: #140209;
   --amarillo: #ffba08;
   --tono-amarillo-one: #faa307;
   --tono-amarillo-two: #f48c06;
@@ -9,7 +9,7 @@
   --rojo-one: #d00000;
   --rojo-two: #dc2f02;
   --blanco: #ffffff;
-  --gray-dark: #CFC3C6;
+  --gray-dark: #121110;
 }
 
 html {

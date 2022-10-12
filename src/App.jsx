@@ -89,7 +89,7 @@ function App() {
             <h1>
               Contacta con los Maestros <br></br> ahora mismo
             </h1>
-            <h2>Amarres y brujería real</h2>
+            <h2 style={{ fontSize: "3rem" }}>Amarres y brujería real</h2>
             <h3>Nosotros te escuchamos, agenda una asesoría </h3>
             <CustomButtonComponent
               onClick={handleClick}
@@ -132,6 +132,15 @@ function App() {
               })}
             </Grid>
           </Box>
+          <div className="center">
+            <CustomButtonComponent
+              onClick={handleClick}
+              variant="outlined"
+              style={{ padding: "6px 30px", zIndex: "1", marginTop: "10vh" }}
+            >
+              Pregunte por el servicio que necesita!
+            </CustomButtonComponent>
+          </div>
         </div>
       </SectionComponent>
 
