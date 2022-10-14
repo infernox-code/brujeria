@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF("/witch_hat_with_old_iron.glb");
+  const { nodes, materials } = useGLTF("/src/assets/witch_hat_with_old_iron.glb");
   return (
     <group {...props} dispose={null} ref={props.reference}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -102,6 +102,6 @@ export function Model(props) {
   );
 }
 
-useGLTF.preload("/witch_hat_with_old_iron.glb");
+useGLTF.preload("/src/assets/witch_hat_with_old_iron.glb");
 
 export default Model;
