@@ -1,16 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
-import ResponsiveAppBarComponent from "./components/appbar/appbar";
-import SectionComponent from "./components/section/section";
-import FooterComponent from "./components/footer/footer";
-import FloatingWhatsApp from "react-floating-whatsapp";
-import AvatarWhatsapp from "./assets/avatar-wpp.jpg";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import IconButton from "@mui/material/IconButton";
-import CustomButtonComponent from "./components/customButton/customButton";
-import ThreeComponent from "./components/three/three";
-import CardComponent from "./components/card/card";
-import { cards, quotes } from "./constants";
+import React, { useRef, useState, useEffect, lazy, Suspense  } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import QuoteComponent from "./components/quote/quote";
@@ -20,6 +8,22 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import IconButton from "@mui/material/IconButton";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+
+import Loading from "./components/loading/loading";
+const ResponsiveAppBarComponent = lazy(() => import("./components/appbar/appbar"));
+const SectionComponent = lazy(() => import("./components/section/section"));
+const FooterComponent = lazy(() => import("./components/footer/footer"));
+const FloatingWhatsApp = lazy(() => import("react-floating-whatsapp"));
+const AvatarWhatsapp = lazy(() => import("./assets/avatar-wpp.jpg"));
+const CustomButtonComponent = lazy(() => import("./components/customButton/customButton"));
+const ThreeComponent = lazy(() => import("./components/three/three"));
+const CardComponent = lazy(() => import("./components/card/card"));
+
+import { cards, quotes } from "./constants";
+
 import "./App.css";
 
 const wppUrl =
@@ -94,6 +98,7 @@ function App() {
 
   return (
     <div id="main">
+      <Suspense fallback={<Loading />}>
       <ResponsiveAppBarComponent scrollSection={scrollSection} />
       {/* Inicio */}
       <SectionComponent reference={topRef} height={100}>
@@ -360,6 +365,7 @@ function App() {
         avatar={AvatarWhatsapp}
       />
       <FooterComponent scrollSection={scrollSection} />
+      </Suspense>
     </div>
   );
 }

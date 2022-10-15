@@ -1,0 +1,45 @@
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-image {
+  width: 50px;
+  height: 50px;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 10px solid #f40000;
+  border-top: 10px solid white;
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+#spinner {
+  width: 100%;
+  height: 100vh;
+}
+
+#loading-logo {
+  position: absolute;
+  top: 42%;
+  right: 53%;
+  transform: translate(50%, -50%);
+}
+
+#spinner span {
+  color: var(--rojo-profundo);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 0 30px;
+}
